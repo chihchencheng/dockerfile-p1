@@ -13,14 +13,13 @@ load_dotenv()
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("test_web")
-url = os.getenv("OK")
     
 
 @allure.feature('Test Demo')
 @allure.story("Test Web")
 def test_web():
     # when run it locally update to Service()
-    service = Service(executable_path="/usr/bin/chromedriver")
+    service = Service(executable_path="/usr/bin/chromedriver")#Service(executable_path="/usr/bin/chromedriver")
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
